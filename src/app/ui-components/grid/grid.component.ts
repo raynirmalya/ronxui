@@ -15,24 +15,36 @@ export class GridComponent implements OnInit {
   private columnData = new BehaviorSubject<ColumnConfig[]>([]);
   @Input()
   set columns(value) {
-      // set the latest value for _data BehaviorSubject
-      this.columnData.next(value);
-  };
+    // set the latest value for _data BehaviorSubject
+    this.columnData.next(value);
+  }
 
   get columns() {
-      // get the latest value from _data BehaviorSubject
-      return this.columnData.getValue();
+    // get the latest value from _data BehaviorSubject
+    return this.columnData.getValue();
   }
   constructor() {}
-  
+
   private randomStr(): string {
     return Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
       .substring(1);
   }
   private guid(): string {
-      return this.randomStr() + this.randomStr() + '-' + this.randomStr() + '-' + this.randomStr() + '-' +
-        this.randomStr() + '-' + this.randomStr() + this.randomStr() + this.randomStr();
+    return (
+      this.randomStr() +
+      this.randomStr() +
+      '-' +
+      this.randomStr() +
+      '-' +
+      this.randomStr() +
+      '-' +
+      this.randomStr() +
+      '-' +
+      this.randomStr() +
+      this.randomStr() +
+      this.randomStr()
+    );
   }
 
   private bootstrapGrid(): void {
@@ -41,18 +53,16 @@ export class GridComponent implements OnInit {
 
   private initColumns(): void {
     if (this.columns) {
-      
     }
-  } 
+  }
   ngOnInit(): void {
     this.gridId = this.guid();
     this.previousColumnConfig = cloneDeep(this.columns);
-    this.columnData.subscribe( (columns: ColumnConfig[])=>{
-      if(columns && columns.length>0) {
-       this.previousColumnConfig = cloneDeep(columns);
-       this.bootstrapGrid();
+    this.columnData.subscribe((columns: ColumnConfig[]) => {
+      if (columns && columns.length > 0) {
+        this.previousColumnConfig = cloneDeep(columns);
+        this.bootstrapGrid();
       }
-     })
+    });
   }
 }
-
