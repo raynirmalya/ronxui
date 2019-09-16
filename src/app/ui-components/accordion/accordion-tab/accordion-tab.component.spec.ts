@@ -8,9 +8,8 @@ describe('AccordionTabComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AccordionTabComponent ]
-    })
-    .compileComponents();
+      declarations: [AccordionTabComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,10 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[ronxCommonTemplate]'
+  selector: '[ronxCommonTemplate]',
 })
 export class CommonTemplateDirective {
-
-  constructor() { }
-
+  constructor() {}
 }
