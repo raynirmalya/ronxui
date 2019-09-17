@@ -29,8 +29,7 @@ export class AccordionTabComponent
   @ContentChildren(CommonTemplateDirective) templates: QueryList<any>;
   constructor(private accService: AccordionService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   ngOnDestroy() {}
 
   ngAfterContentInit() {
@@ -50,11 +49,11 @@ export class AccordionTabComponent
   }
 
   public onClickHeader() {
-    if(this.toggle) {
+    if (this.toggle) {
       this.isContentVisible = !this.isContentVisible;
-      this.accService.setData({tabIndex: this.tabIndex});
+      this.accService.setData({ tabIndex: this.tabIndex });
     } else {
-        this.isContentVisible = !this.isContentVisible;
+      this.isContentVisible = !this.isContentVisible;
     }
   }
 

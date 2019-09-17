@@ -6,19 +6,13 @@ import { CommonTemplateDirective } from '../shared/directives/ronx-template.dire
 import { AccordionService } from './services/accordion.service';
 
 @NgModule({
-  imports: [
-    CommonModule,
-  ],
-  exports: [
+  imports: [CommonModule],
+  exports: [AccordionComponent, AccordionTabComponent, CommonTemplateDirective],
+  declarations: [
     AccordionComponent,
     AccordionTabComponent,
-    CommonTemplateDirective
+    CommonTemplateDirective,
   ],
-  declarations: [   
-    AccordionComponent,
-    AccordionTabComponent,
-    CommonTemplateDirective
-  ],
-  providers:  [AccordionService]
+  providers: [AccordionService],
 })
-export class AccordionModule { }
+export class AccordionModule {}

@@ -5,11 +5,14 @@ import { AccordionService } from './accordion.service';
 describe('AccordionService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AccordionService]
+      providers: [AccordionService],
     });
   });
 
-  it('should be created', inject([AccordionService], (service: AccordionService) => {
-    expect(service).toBeTruthy();
-  }));
+  it('should be created', inject(
+    [AccordionService],
+    (service: AccordionService) => {
+      expect(service).toBeTruthy();
+    }
+  ));
 });

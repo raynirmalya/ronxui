@@ -3,14 +3,12 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Injectable()
 export class AccordionService {
-
   private tabHeaderEvent = new BehaviorSubject<any>(null);
-  public tabHeaderEventData  = this.tabHeaderEvent.asObservable();
+  public tabHeaderEventData = this.tabHeaderEvent.asObservable();
 
-  constructor() { }
+  constructor() {}
 
   setData(data: any) {
     this.tabHeaderEvent.next(data);
   }
-
 }

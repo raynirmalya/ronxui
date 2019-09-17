@@ -6,11 +6,7 @@ import { GridComponent } from './ui-components/grid/grid.component';
 import { DropdownsComponent } from './ui-components/dropdowns/dropdowns.component';
 import { AccordionModule } from './ui-components/accordion/accordion.module';
 @NgModule({
-  declarations: [
-    AppComponent,
-    GridComponent,
-    DropdownsComponent,
-  ],
+  declarations: [AppComponent, GridComponent, DropdownsComponent],
   imports: [BrowserModule, AccordionModule],
   providers: [],
   bootstrap: [AppComponent],

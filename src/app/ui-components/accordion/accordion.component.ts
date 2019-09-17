@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, QueryList, ContentChildren, OnDestroy, AfterContentInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  QueryList,
+  ContentChildren,
+  OnDestroy,
+  AfterContentInit,
+} from '@angular/core';
 import { AccordionTabComponent } from './accordion-tab/accordion-tab.component';
 import { AccordionService } from './services/accordion.service';
 
@@ -15,9 +23,9 @@ export class AccordionComponent implements OnInit, OnDestroy, AfterContentInit {
 
   ngOnInit(): void {
     this.accService.tabHeaderEventData.subscribe(data => {
-      if(data) {
+      if (data) {
         this.accordionTabs.forEach((item, index) => {
-          if(item.tabIndex !== data.tabIndex) {
+          if (item.tabIndex !== data.tabIndex) {
             item.isContentVisible = false;
           }
         });
@@ -33,4 +41,3 @@ export class AccordionComponent implements OnInit, OnDestroy, AfterContentInit {
     });
   }
 }
-
