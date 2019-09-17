@@ -1,12 +1,19 @@
 <div class="accordion-tabs">
-    <ng-content></ng-content>
-  <div class="header">
+  <div class="header" (click)="onClickHeader()">
     <ng-container *ngIf="headerTemplate">
       <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
     </ng-container>
-    <div class="float-right"><i class="fa fa-angle-right fa-1x"></i></div>
+    <div class="float-right">
+      <i
+        class="fa fa-1x"
+        [ngClass]="{
+          'fa-angle-right': !isContentVisible,
+          'fa-angle-down': isContentVisible
+        }"
+      ></i>
+    </div>
   </div>
-  <div class="content">
+  <div class="content" (click)="onClickContent()" *ngIf="isContentVisible">
     <ng-container *ngIf="contentTemplate">
       <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
     </ng-container>

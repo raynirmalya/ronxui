@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'app';
 
   ngOnInit() {
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit{
     // const stck = stack.push(8);
     // console.log(stck);
   }
-  
+
   colsConfig = [
     { field: 'vin', title: 'Column1', dataType: 'multiselect' },
     {

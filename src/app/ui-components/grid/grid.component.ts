@@ -3,7 +3,6 @@ import { ColumnConfig } from './models/column.model';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import * as cloneDeep from 'lodash/cloneDeep';
 
-
 @Component({
   selector: 'ronx-grid',
   templateUrl: './grid.component.html',
@@ -54,7 +53,6 @@ export class GridComponent implements OnInit {
 
   private initColumns(): void {
     if (this.columns) {
-     
     }
   }
   ngOnInit(): void {

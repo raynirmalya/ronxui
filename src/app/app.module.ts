@@ -4,19 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { GridComponent } from './ui-components/grid/grid.component';
 import { DropdownsComponent } from './ui-components/dropdowns/dropdowns.component';
-import { AccordionComponent } from './ui-components/accordion/accordion.component';
-import { AccordionTabComponent } from './ui-components/accordion/accordion-tab/accordion-tab.component';
-import { CommonTemplateDirective } from './ui-components/shared/directives/ronx-template.directive';
+import { AccordionModule } from './ui-components/accordion/accordion.module';
 @NgModule({
   declarations: [
     AppComponent,
     GridComponent,
     DropdownsComponent,
-    AccordionComponent,
-    AccordionTabComponent,
-    CommonTemplateDirective,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, AccordionModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,3 @@
+interface AccordionHeaderModel {
+    tabIndex?: number;
+}

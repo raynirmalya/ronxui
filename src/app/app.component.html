@@ -15,18 +15,18 @@
         <div class="sidebar-header">
           <h3>RonX-UI</h3>
         </div>
-        <ronx-accordion>
-          <ronx-accordion-tab>
-            <ng-template commonTemplate="header">tab1</ng-template> 
-            <ng-template commonTemplate="content">tab1 content</ng-template> 
+        <ronx-accordion [toggle]="true">
+          <ronx-accordion-tab [isDefaultExpanded]="true">
+            <ng-template ronxCommonTemplate="header">tab1</ng-template>
+            <ng-template ronxCommonTemplate="content">tab1 content</ng-template>
+          </ronx-accordion-tab>
+          <ronx-accordion-tab >
+            <ng-template ronxCommonTemplate="header">tab2</ng-template>
+            <ng-template ronxCommonTemplate="content">tab2 content</ng-template>
           </ronx-accordion-tab>
           <ronx-accordion-tab>
-            <ng-template commonTemplate="header">tab2</ng-template> 
-            <ng-template commonTemplate="content">tab2 content</ng-template> 
-          </ronx-accordion-tab>
-          <ronx-accordion-tab>
-            <ng-template commonTemplate="header">tab3</ng-template> 
-            <ng-template commonTemplate="content">tab3 content</ng-template> 
+            <ng-template ronxCommonTemplate="header">tab3</ng-template>
+            <ng-template ronxCommonTemplate="content">tab3 content</ng-template>
           </ronx-accordion-tab>
         </ronx-accordion>
         <ul class="list-unstyled components">

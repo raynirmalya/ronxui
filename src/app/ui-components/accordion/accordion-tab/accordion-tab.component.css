@@ -1,5 +1,9 @@
-.accordion-tabs {
+.accordion-tabs .header {
     padding: 5px;
     margin: 10px;
     border-bottom: 1px solid grey;
+}
+.accordion-tabs .content {
+    padding: 5px;
+    margin: 10px;
 }

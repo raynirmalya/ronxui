@@ -5,12 +5,12 @@ import { Directive, Input, TemplateRef } from '@angular/core';
 })
 export class CommonTemplateDirective {
   @Input() type: string;
-    
-  @Input('commonTemplate') name: string;
-  
+
+  @Input('ronxCommonTemplate') name: string;
+
   constructor(public template: TemplateRef<any>) {}
-  
+
   getType(): string {
-      return this.name ? this.name.toUpperCase(): this.name;
+    return this.name ? this.name.toUpperCase() : this.name;
   }
 }
