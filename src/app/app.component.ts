@@ -1,13 +1,21 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+// import Stack from '@jsundefined/algojs/collections/stack';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'app';
 
+  ngOnInit() {
+    // const stack = new Stack();
+    // stack.push(3);
+    // stack.push(5);
+    // const stck = stack.push(8);
+    // console.log(stck);
+  }
+  
   colsConfig = [
     { field: 'vin', title: 'Column1', dataType: 'multiselect' },
     {

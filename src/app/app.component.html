@@ -17,13 +17,16 @@
         </div>
         <ronx-accordion>
           <ronx-accordion-tab>
-            tab1
+            <ng-template commonTemplate="header">tab1</ng-template> 
+            <ng-template commonTemplate="content">tab1 content</ng-template> 
           </ronx-accordion-tab>
           <ronx-accordion-tab>
-            tab2
+            <ng-template commonTemplate="header">tab2</ng-template> 
+            <ng-template commonTemplate="content">tab2 content</ng-template> 
           </ronx-accordion-tab>
           <ronx-accordion-tab>
-            tab2
+            <ng-template commonTemplate="header">tab3</ng-template> 
+            <ng-template commonTemplate="content">tab3 content</ng-template> 
           </ronx-accordion-tab>
         </ronx-accordion>
         <ul class="list-unstyled components">

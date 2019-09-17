@@ -1,4 +1,14 @@
 <div class="accordion-tabs">
-  <ng-content></ng-content>
-  <div class="float-right"><i class="fa fa-angle-right fa-1x"></i></div>
+    <ng-content></ng-content>
+  <div class="header">
+    <ng-container *ngIf="headerTemplate">
+      <ng-container *ngTemplateOutlet="headerTemplate"></ng-container>
+    </ng-container>
+    <div class="float-right"><i class="fa fa-angle-right fa-1x"></i></div>
+  </div>
+  <div class="content">
+    <ng-container *ngIf="contentTemplate">
+      <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+    </ng-container>
+  </div>
 </div>

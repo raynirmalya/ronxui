@@ -1,8 +1,8 @@
-import { RonxTemplateDirective } from './ronx-template.directive';
+import { CommonTemplateDirective } from './ronx-template.directive';
 
-describe('RonxTemplateDirective', () => {
+describe('CommonTemplateDirective', () => {
   it('should create an instance', () => {
-    const directive = new RonxTemplateDirective();
+    const directive = new CommonTemplateDirective({createEmbeddedView: null, elementRef: null});
     expect(directive).toBeTruthy();
   });
 });
