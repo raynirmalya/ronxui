@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ColumnConfig } from './models/column.model';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 import * as cloneDeep from 'lodash/cloneDeep';
 
 @Component({
