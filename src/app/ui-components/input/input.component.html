@@ -1,0 +1,16 @@
+<div class="form-group jarvis-group my-0">
+  <div class="jarvis-label">
+    <label for="{{ id }}" *ngIf="!isLabelHide">{{ label }}</label>
+  </div>
+  <input
+    #el
+    type="text"
+    class="form-control jarvis-input"
+    name="{{ name }}"
+    id="{{ id }}"
+    placeholder="{{ placeHldr }}"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    [(ngModel)]="model"
+  />
+</div>

@@ -1,0 +1,74 @@
+.jarvis-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 0px !important;
+  height: 17px;
+  width:100%;
+}
+.jarvis-options {
+  position: absolute;
+  list-style: none;
+  background: #fff;
+  width: 300px;
+  border: 1px solid #e3e6f0;
+  padding-left: 0px;
+  box-shadow: 0 5px 5px #888;
+}
+.jarvis-options li {
+  padding: 5px;
+  border-bottom: 1px solid #e3e6f0;
+  cursor: pointer;
+  font-size: 12px;
+}
+.jarvis-options li.selected {
+  background: #eee;
+}
+.inline {
+  display: inline;
+}
+.multiselect-input {
+  border: 0px;
+  outline: none;
+}
+
+.multiselect-input :focus {
+  border: 0px;
+  outline: none;
+}
+
+.chipper {
+  border: 1px solid #337ab7;
+  margin-right: 4px;
+  background: #337ab7;
+  padding: 0 5px;
+  color: #fff;
+  border-radius: 2px;
+  float: left;
+  font-size: 12px;;
+}
+.jarvis-options li:hover {
+  background: #337ab7;
+  color: #fff;
+}
+.jarvis-options li:hover .green {
+  color: white;
+}
+.padding-1{
+  padding: 6px;
+}
+.remove {
+  cursor: pointer;
+}
+.green {
+  color: green;
+}
+.fa-20 {
+  font-size: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-left: 1px solid #ccc;
+}

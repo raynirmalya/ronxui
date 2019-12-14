@@ -1,0 +1,10 @@
+.jarvis-toaster {
+  position: fixed;
+  left: 40%;
+  top: 45px;
+  width: 380px;
+  background: #60bb60;
+  color: white;
+  padding: 10px;
+  z-index: 999;
+}

@@ -1,0 +1,60 @@
+<div
+  class="form-group jarvis-group my-0"
+  #multiSelect
+  (jarvisOutsideclick)="close($event)"
+  (click)="onFocus()"
+>
+  <div class="jarvis-label">
+    <label for="{{ id }}" *ngIf="!isLabelHide">{{ label }}</label>
+  </div>
+  <div
+    class="form-control jarvis-input"
+    [ngClass]="{ 'padding-1': selectedValues.length > 0 }"
+  >
+    <div class="inline">
+      <div class="chipper" *ngFor="let opts of selectedValues; let i = index">
+        {{ opts }}
+        <span class="remove" (click)="onRemove(i)"
+          ><i class="fa fa-remove"></i
+        ></span>
+      </div>
+    </div>
+    <input
+      type="text"
+      class="multiselect-input"
+      name="{{ name }}"
+      id="{{ id }}"
+      placeholder="{{ placeHldr }}"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+      [(ngModel)]="model"
+    />
+    <div class="inline float-right pointer">
+      <span
+        ><i
+          class="fa fa-20"
+          [ngClass]="{
+            'fa-angle-down': !showOptions,
+            'fa-angle-up': showOptions
+          }"
+        ></i
+      ></span>
+    </div>
+  </div>
+  <ng-container>
+    <div *ngIf="showOptions">
+      <ul class="jarvis-options">
+        <li
+          *ngFor="let opts of jarvisOptions | filter: model; let i = index"
+          [ngClass]="{ selected: opts.isSelected }"
+          (click)="onSelect(opts, i)"
+        >
+          {{ opts.value }}
+          <span class="float-right green" *ngIf="opts.isSelected"
+            ><i class="fa fa-check" aria-hidden="true"></i
+          ></span>
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+</div>
